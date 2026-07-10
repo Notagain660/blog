@@ -13,5 +13,5 @@ jobs:
           fetch-depth: 0
       - name: Push to Gitee mirror
         run: |
-          git remote add gitee https://git:${{ secrets.GITEE_TOKEN }}@gitee.com/xinxin-has-arrived/blog.git
+          git remote add gitee https://oauth2:${{ secrets.GITEE_TOKEN }}@gitee.com/xinxin-has-arrived/blog.git
           git push -f gitee HEAD:master
